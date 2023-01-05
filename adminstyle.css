@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    border: 0;
+    font-family: "Roboto",Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.container{
+    background-color: #f0fdfa;
+    display: grid;
+    grid-template-columns: minmax(175px,30vh) 3fr;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas: "sidebar uppercontent"
+    "sidebar bottomcontent";
+    align-content: center;
+}
+.sidebar{
+    color: white;
+    background-color: #2dd4bf;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.uppercontent{
+    background-color: white;
+    grid-area: uppercontent;
+    display: grid;
+    grid-template-rows: auto;
+    align-content: space-around;
+    padding-left: 20px;
+}
+.uc1{
+    display: grid;
+    grid-template-columns: 25px minmax(200px,400px) minmax(180px,1fr);
+    align-items: center;
+}
+.uc1>div{
+    text-align: end;
+    gap: 20px;
+}
+.uc2{
+    display: grid;
+    grid-template-columns: 50px minmax(200px,580px) 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.uc2>div{
+    justify-self: left;
+}
+.botomcontent{
+    grid-area: bottomcontent;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../admindashboard/Fonts/Roboto-Thin.ttf");
+}
+.menu{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    align-self: flex-start;
+    grid-template-columns: 130px;
+}
+.logo{
+    font-size: 30px;
+}
+input{
+    width: 80%;
+    background-color: #eeeeee;
+    border-radius: 30px;
+    border: 0;
+    height: 20px;
+}
