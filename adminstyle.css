@@ -5,7 +5,7 @@ body{
     font-weight: bold;
 }
 .container{
-    background-color: #f0fdfa;
+    background-color: #eeeeee;
     display: grid;
     grid-template-columns: minmax(175px,30vh) 3fr;
     grid-template-rows: 20vh 80vh;
@@ -41,15 +41,41 @@ body{
 }
 .uc2{
     display: grid;
-    grid-template-columns: 50px minmax(200px,580px) 1fr 1fr 1fr;
+    grid-template-columns: 50px minmax(200px,80%) 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
+    gap: 10px;
 }
 .uc2>div{
+    display: grid;
     justify-self: left;
 }
-.botomcontent{
+.bottomcontent{
     grid-area: bottomcontent;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "uno dos"
+    "uno tres";
+    background-color: white;
+    margin: 40px;
+    align-items: center;
+}
+.yourprojects{
+    grid-area: uno;
+    display: grid;
+
+}
+#cards{
+    margin: 20px;
+    border-left-color: yellow;
+    border-left: 5px;
+}
+.announcements{
+    grid-area: dos;
+}
+.trending{
+    grid-area: tres;
 }
 @font-face {
     font-family: "Roboto";
@@ -73,4 +99,19 @@ input{
     border-radius: 30px;
     border: 0;
     height: 20px;
+}
+button{
+    background-color: #0d9488;
+    color: white;
+    border: 0;
+    border-radius: 40px;
+    animation: alternate;
+    padding-inline: 18px;
+    padding-block: 10px;
+}
+button:hover{
+    background-color: #2dd4bf;
+    transition-duration: 700ms;
+    color: black;
+    border: 2px solid;
 }
